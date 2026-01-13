@@ -1,59 +1,59 @@
-# AnalyticsUi
+# Analytics Dashboard (Frontend)
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.0.5.
+An Angular-based dashboard for visualizing real-time analytics and Dead Letter Queue (DLQ) events produced by a Kafka-powered backend system.
 
-## Development server
+This UI focuses on clarity, observability, and clean visualization of event-driven data.
 
-To start a local development server, run:
+---
 
-```bash
-ng serve
-```
+## Overview
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+The frontend allows users to:
+- Trigger Kafka events
+- View processed analytics data
+- Inspect DLQ events
+- Understand system behavior visually
 
-## Code scaffolding
+This project complements the Kafka backend and completes the end-to-end data flow.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+---
 
-```bash
-ng generate component component-name
-```
+## UI Features
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+- Trigger user activity events
+- View analytics stored in MongoDB
+- View DLQ events
+- Clean and readable dashboard layout
+- Simple and focused UI design
 
-```bash
-ng generate --help
-```
+---
 
-## Building
+##  Dashboard Preview
 
-To build the project run:
+<p align="center">
+  <img src="public/u112-ss.png" width="800" alt="System Architecture Diagram">
+</p>
 
-```bash
-ng build
-```
+<p align="center">
+  <img src="public/u113-ss.png" width="800" alt="System Architecture Diagram">
+</p>
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+---
 
-## Running unit tests
+## Tech Stack
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+- Angular (Standalone Components)
+- TypeScript
+- CSS
 
-```bash
-ng test
-```
+---
 
-## Running end-to-end tests
 
-For end-to-end (e2e) testing, run:
+# Backend Repository
 
-```bash
-ng e2e
-```
+This frontend consumes data from the Kafka-based backend:
+- https://github.com/04Marsha/Kafka-based-Analytics-Dashboard-Backend
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+--- 
 
-## Additional Resources
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
