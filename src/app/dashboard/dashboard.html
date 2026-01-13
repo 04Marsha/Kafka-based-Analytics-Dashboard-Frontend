@@ -1,0 +1,58 @@
+<div class="container">
+  <header class="header">
+    <h1>Kafka Analytics Dashboard</h1>
+    <p>Event-driven user activity & failure monitoring</p>
+  </header>
+
+  <section class="action-card">
+    <h3>User Actions</h3>
+    <p>
+      User ID: <strong>{{ userId }}</strong>
+    </p>
+
+    <button class="primary-btn" (click)="sendLogin()">Send LOGIN Event</button>
+  </section>
+
+  <section class="events-card">
+    <h3>Activity Timeline</h3>
+
+    @if (events.length === 0) {
+    <div class="empty">No activity yet. Trigger an event to begin.</div>
+    } @if (events.length > 0) {
+    <ul class="event-list">
+      @for (e of events; track e._id) {
+      <li>
+        <span class="badge">{{ e.eventType }}</span>
+        <span class="time">{{ e.timestamp | date : 'medium' }}</span>
+      </li>
+      }
+    </ul>
+    }
+  </section>
+
+  <section class="dlq-card">
+    <div class="dlq-header">
+      <h3>Dead Letter Queue (DLQ)</h3>
+      <span class="dlq-count">{{ dlqEvents.length }} events</span>
+    </div>
+
+    <button class="danger-btn" (click)="loadDlqEvents()">Load DLQ Events</button>
+
+    @if (dlqEvents.length === 0) {
+    <div class="empty">No failed events</div>
+    } @if (dlqEvents.length > 0) {
+    <ul class="dlq-list">
+      @for (d of dlqEvents; track d.id) {
+      <li>
+        <div class="dlq-meta">
+          <span class="error">{{ d.error }}</span>
+          <span class="time">{{ d.failedAt | date : 'medium' }}</span>
+        </div>
+
+        <pre class="raw">{{ d.rawMessage }}</pre>
+      </li>
+      }
+    </ul>
+    }
+  </section>
+</div>

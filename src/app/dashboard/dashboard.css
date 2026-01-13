@@ -1,0 +1,143 @@
+* {
+  box-sizing: border-box;
+  font-family: Inter, Arial, sans-serif;
+}
+
+.container {
+  max-width: 960px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.header {
+  margin-bottom: 32px;
+}
+
+.header h1 {
+  font-size: 2rem;
+  margin-bottom: 6px;
+}
+
+.header p {
+  color: #666;
+}
+
+.action-card,
+.events-card,
+.dlq-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 22px;
+  margin-bottom: 26px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.primary-btn {
+  margin-top: 12px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  background: #4f46e5;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.primary-btn:hover {
+  background: #4338ca;
+}
+
+.danger-btn {
+  margin: 12px 0;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 6px;
+  background: #dc2626;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.danger-btn:hover {
+  background: #b91c1c;
+}
+
+.event-list,
+.dlq-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.event-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+}
+
+.event-list li:last-child {
+  border-bottom: none;
+}
+
+.badge {
+  background: #e0e7ff;
+  color: #3730a3;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.dlq-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dlq-count {
+  font-size: 13px;
+  color: #991b1b;
+  background: #fee2e2;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.dlq-list li {
+  margin-top: 14px;
+  padding: 14px;
+  border-radius: 8px;
+  background: #fff5f5;
+  border: 1px solid #fecaca;
+}
+
+.dlq-meta {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.error {
+  color: #b91c1c;
+  font-weight: 600;
+}
+
+.raw {
+  background: #111;
+  color: #e5e7eb;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  overflow-x: auto;
+}
+
+.time {
+  font-size: 13px;
+  color: #555;
+}
+
+.empty {
+  padding: 18px;
+  text-align: center;
+  color: #888;
+}
